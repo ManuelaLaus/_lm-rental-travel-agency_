@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>L.M. Rental & Travel Agency (Island Korcula, Croatia)</title>
+  <title>L.M. Rental & Travel Agency (Island Korčula, Croatia)</title>
   <style>
     :root {
       --main-red: #b82b1c;
@@ -61,19 +60,20 @@
       padding: 0 1rem;
     }
 
-    /* Welcome section with text left, QR right on grey background */
+    /* Welcome section: flex with text left and QR right, gray background, no white behind text */
     #welcome-section {
       background-color: var(--light-gray);
       display: flex;
       align-items: center;
-      padding: 20px;
+      padding: 20px 30px;
       gap: 30px;
       border-radius: 8px;
     }
 
-    #welcome-section div.text-content {
+    #welcome-section .text-content {
       flex: 1;
       color: var(--dark-gray);
+      text-align: left;
     }
 
     #welcome-section h2 {
@@ -89,142 +89,20 @@
       white-space: pre-line;
     }
 
-    #welcome-section div.qr-code {
+    #welcome-section .qr-code {
       width: 160px;
+      flex-shrink: 0;
     }
 
     #welcome-section img {
       width: 100%;
       height: auto;
       display: block;
+      border-radius: 8px;
     }
 
     /* Footer styles */
     footer {
       text-align: center;
       padding: 1rem 0;
-      background: var(--main-red);
-      color: var(--white);
-      font-size: 0.9rem;
-    }
-
-    /* Contact button styles */
-    .contact-button-container {
-      text-align: center;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .contact-button-container p {
-      font-weight: bold;
-      margin: 0 0 0.4rem 0;
-      font-size: 1.1rem;
-      color: var(--dark-gray);
-    }
-
-    .contact-button {
-      background-color: var(--main-red);
-      color: var(--white);
-      border: none;
-      padding: 12px 28px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .contact-button:hover,
-    .contact-button:focus {
-      background-color: var(--dark-red);
-      outline: none;
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <h1>L.M. Rental & Travel Agency (Island Korcula, Croatia)</h1>
-  </header>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#bikes">Bikes</a>
-    <a href="#scooters">Scooters</a>
-    <a href="#car-rental">Car Rental</a>
-    <a href="#boat">Boat</a>
-    <a href="#apartment">Apartment</a>
-    <a href="#taxi-service">Taxi Service</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="welcome-section">
-    <div class="text-content">
-      <h2>Welcome</h2>
-      <p>Welcome, and thank you for your interest!
-
-My name is Manuela, and for nearly 20 years I’ve been renting out various types of transportation to help visitors explore and enjoy beautiful Korčula to the fullest.
-
-Whether you’re looking to discover hidden beaches, charming villages, or scenic coastal routes — I’m happy to help you choose the right vehicle and share some local tips to make your stay truly special.
-
-Whether you need a car, e-bike, bicycle, scooter or boat — we’ve got it all. Clear communication, fair prices, convenience, and a well-organized experience are what you can expect.
-
-Have any questions? Just send me a message via WhatsApp — I’m here to help!</p>
-    </div>
-    <div class="qr-code">
-      <img src="images/qr-code.png" alt="QR code" />
-    </div>
-  </section>
-
-  <!-- Content sections placeholders -->
-  <section id="bikes">
-    <h2>Bikes</h2>
-    <!-- Bikes content goes here -->
-  </section>
-
-  <section id="scooters">
-    <h2>Scooters</h2>
-    <!-- Scooters content goes here -->
-  </section>
-
-  <section id="car-rental">
-    <h2>Car Rental</h2>
-    <!-- Car rental content goes here -->
-  </section>
-
-  <section id="boat">
-    <h2>Boat</h2>
-    <p>Discover the beauty of Korčula from the sea with our reliable boat rentals.
-      Whether you want to spend the day island-hopping, exploring hidden bays, or simply enjoying the crystal-clear waters, we have the perfect boat for you.</p>
-  </section>
-
-  <section id="apartment">
-    <h2>Apartment</h2>
-    <p>Enjoy your stay in our comfortable and well-located apartment, just a short ride from the centre of the town of Korcula.
-      Fully equipped with everything you need for a relaxing holiday, including a kitchen, air conditioning, and free Wi-Fi.
-      Perfect for couples looking for convenience and comfort during their visit to Korčula.<br><br>
-      <a href="https://www.booking.com/hotel/hr/apartment-mana.nl.html?aid=357028&label=bin859jc-10CAsoZUIOYXBhcnRtZW50LW1hbmFIM1gDaGWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AvDZs8QGwAIB0gIkYzcwOTlhZTItNjhkNi00Zjg1LWFlMGUtZjU1ZmFhMzEwZjU02AIB4AIB&sid=130959e5ac0d94f139c723a149cb4174&dist=0&keep_landing=1&sb_price_type=total&type=total" target="_blank" rel="noopener noreferrer">Book the apartment on Booking.com</a>
-    </p>
-    <img src="images/tet_apartment_photo5.jpg" alt="Apartment photo" style="max-width:100%; border-radius: 8px; margin-top: 10px;" />
-  </section>
-
-  <section id="taxi-service">
-    <h2>Taxi Service</h2>
-    <!-- Taxi service content goes here -->
-  </section>
-
-  <section id="contact">
-    <div class="contact-button-container">
-      <p>Questions or ready to book? Call us: +385 91 503 44 99</p>
-      <a class="contact-button" href="tel:+385915034499">📞 Call Us</a>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 L.M. Rental & Travel Agency. All rights reserved.
-  </footer>
-</body>
-
-</html>
+      background: va
