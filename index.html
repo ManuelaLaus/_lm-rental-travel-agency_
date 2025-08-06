@@ -2,165 +2,272 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>L.M. Rental & Travel Agency</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L.M. Rental & Travel Agency (Island Korčula, Croatia)</title>
   <style>
     :root {
-      --main-red: #c0392b;
-      --light-red: #e74c3c;
-      --white: #ffffff;
-      --dark: #333333;
-      --light-gray: #f2f2f2;
+      --main-red: #b82b1c;
+      --dark-red: #992219;
+      --light-gray: #f0f0f0;
+      --dark-gray: #333;
+      --white: #fff;
     }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: var(--light-gray);
-      color: var(--dark);
+      background: var(--light-gray);
+      color: var(--dark-gray);
+      scroll-behavior: smooth;
     }
+
     header {
       background: var(--main-red);
       color: var(--white);
       padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
+
     header h1 {
       margin: 0;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
+
+    nav {
+      background: var(--dark-red);
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 0.5rem 0;
+      position: sticky;
+      top: 3.5rem; /* header height */
+      z-index: 999;
+    }
+
     nav a {
       color: var(--white);
       text-decoration: none;
-      margin-left: 1rem;
       font-weight: bold;
+      font-size: 1rem;
+      padding: 0.25rem 0.5rem;
+      transition: background 0.3s;
     }
+
     nav a:hover {
-      text-decoration: underline;
+      background: var(--main-red);
+      border-radius: 4px;
     }
-    .banner {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    section {
+
+    main {
       max-width: 1000px;
       margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
       background: var(--white);
-      padding: 1rem;
       border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
     }
-    h2 {
+
+    section h2 {
       color: var(--main-red);
-      border-bottom: 2px solid var(--light-red);
-      padding-bottom: 0.5rem;
+      margin-top: 0;
+      border-bottom: 2px solid var(--main-red);
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
     }
+
+    /* Welcome section */
+    #home p {
+      line-height: 1.6;
+      white-space: pre-line;
+    }
+
+    .banner {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 1rem;
+      display: block;
+    }
+
     .items {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       justify-content: center;
     }
+
     .item {
-      flex: 1 1 300px;
+      flex: 1 1 280px;
+      max-width: 280px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fafafa;
+      box-shadow: 0 0 6px rgba(0,0,0,0.05);
+      text-align: center;
+      padding-bottom: 1rem;
     }
+
     .item img {
       width: 100%;
-      border-radius: 6px;
+      height: auto;
+      border-bottom: 1px solid #ddd;
     }
-    .call-button {
-      display: inline-block;
-      background: var(--main-red);
-      color: var(--white);
-      padding: 0.75rem 1.5rem;
-      margin-top: 1rem;
-      border-radius: 5px;
+
+    .item h3 {
+      margin: 0.75rem 0 0.25rem;
+      color: var(--main-red);
+    }
+
+    .item p {
+      margin: 0 1rem 0.5rem;
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    .price {
       font-weight: bold;
-      text-decoration: none;
+      color: var(--dark-red);
     }
-    footer {
-      background: var(--main-red);
+
+    /* Contact button */
+    .contact-button-container {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .contact-button-container p {
+      font-weight: bold;
+      margin: 0 0 0.5rem 0;
+      font-size: 1.2rem;
+    }
+
+    .contact-button {
+      background-color: var(--main-red);
       color: var(--white);
+      border: none;
+      padding: 12px 28px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .contact-button:hover,
+    .contact-button:focus {
+      background-color: var(--dark-red);
+      outline: none;
+    }
+
+    footer {
       text-align: center;
       padding: 1rem;
-      margin-top: 2rem;
+      background: var(--main-red);
+      color: var(--white);
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-wrap: wrap;
+      }
+      .items {
+        flex-direction: column;
+        align-items: center;
+      }
+      .item {
+        max-width: 90%;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>L.M. Rental & Travel Agency</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#bikes">Bikes</a>
-      <a href="#ebikes">E-bikes</a>
-      <a href="#scooters">Scooters</a>
-      <a href="#taxi">Taxi Service</a>
-      <a href="#apartment">Apartment</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>L.M. Rental & Travel Agency (Island Korčula, Croatia)</h1>
   </header>
 
-  <img src="images/Tet voorkant Banner 2__.jpg" alt="Banner" class="banner" />
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#bikes">Bikes</a>
+    <a href="#scooters">Scooters</a>
+    <a href="#taxi">Taxi Service</a>
+    <a href="#boat">Boat</a>
+    <a href="#apartment">Apartment</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <section id="home">
-    <h2>Welcome</h2>
-    <p>Welcome, and thank you for your interest!</p>
-    <p>My name is Manuela, and for nearly 20 years I’ve been renting out various types of transportation to help visitors explore and enjoy beautiful Korčula to the fullest.</p>
-    <p>Whether you’re looking to discover hidden beaches, charming villages, or scenic coastal routes — I’m happy to help you choose the right vehicle and share some local tips to make your stay truly special.</p>
-    <p>Whether you need a car, e-bike, bicycle, scooter or boat — we’ve got it all. Clear communication, fair prices, convenience, and a well-organized experience are what you can expect.</p>
-    <p>Have any questions? Just send me a message via WhatsApp — I’m here to help!</p>
-  </section>
+  <main>
+    <section id="home">
+      <h2>Welcome</h2>
+      <p>Welcome, and thank you for your interest!
 
-  <section id="bikes">
-    <h2>Bikes</h2>
-    <div class="items">
-      <div class="item"><img src="images/Tet fiets 4__.jpg" alt="Bikes" /></div>
-      <div class="item"><img src="images/Tet fietshelm 1__.jpg" alt="Bike Helmets" /></div>
-    </div>
-  </section>
+My name is Manuela, and for nearly 20 years I’ve been renting out various types of transportation to help visitors explore and enjoy beautiful Korčula to the fullest.
 
-  <section id="ebikes">
-    <h2>E-bikes</h2>
-    <p>Explore Korčula with ease and comfort using our modern e-bikes. Perfect for covering long distances without breaking a sweat.</p>
-    <!-- Add your e-bike images here -->
-  </section>
+Whether you’re looking to discover hidden beaches, charming villages, or scenic coastal routes, I’m happy to help you choose the right vehicle and share some local tips to make your stay truly special.
 
-  <section id="scooters">
-    <h2>Scooters</h2>
-    <div class="items">
-      <div class="item"><img src="images/Tet scooter 2__.jpg" alt="Scooters" /></div>
-      <div class="item"><img src="images/Tet scooter 6__.jpg" alt="Scooters 2" /></div>
-      <div class="item"><img src="images/Tet scooter helm 2__.jpg" alt="Scooter Helmets" /></div>
-    </div>
-  </section>
+Whether you need a car, e-bike, bicycle, scooter or boat, we’ve got it all. Clear communication, fair prices, convenience, and a well-organized experience are what you can expect.
 
-  <section id="taxi">
-    <h2>Taxi Service</h2>
-    <div class="items">
-      <div class="item"><img src="images/Tet taxi 1__.jpg" alt="Taxi 1" /></div>
-      <div class="item"><img src="images/Tet taxi 2__.jpg" alt="Taxi 2" /></div>
-    </div>
-  </section>
+Have any questions? Just send me a message via WhatsApp — I’m here to help!</p>
+      <img src="images/Tet voorkant Banner 2__.jpg" alt="Banner" class="banner" />
+    </section>
 
-  <section id="apartment">
-    <h2>Apartment</h2>
-    <p>Stay in comfort at our well-located apartment, close to the ferry and all local attractions.</p>
-    <!-- Add your apartment images here -->
-  </section>
+    <section id="bikes">
+      <h2>Bikes</h2>
+      <div class="items">
+        <div class="item">
+          <img src="images/Tet fiets 4__.jpg" alt="Bikes" />
+          <h3>Bicycles & E-bikes</h3>
+          <p>Explore Korčula easily with our range of bicycles and e-bikes, perfect for both the coast and town streets.</p>
+        </div>
+        <div class="item">
+          <img src="images/Tet fietshelm 1__.jpg" alt="Bike Helmets" />
+          <h3>Included Helmets</h3>
+          <p>Each rental includes quality helmets to keep you safe on the road.</p>
+        </div>
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📍 Location: Port 9; Dubrovacka cesta 19, Korčula (near the ferry)</p>
-    <p>📞 Phone & WhatsApp: <a href="tel:+385915034499">+385 91 503 44 99</a></p>
-    <p>📸 Instagram: <a href="https://www.instagram.com/korcula_l.m._rental_agency" target="_blank">@korcula_l.m._rental_agency</a></p>
-    <a href="tel:+385915034499" class="call-button">📞 Call Us</a>
-  </section>
+    <section id="scooters">
+      <h2>Scooters</h2>
+      <div class="items">
+        <div class="item">
+          <img src="images/Tet scooter 2__.jpg" alt="Scooter 50cc" />
+          <h3>Scooter 50cc</h3>
+          <p>Modern and fuel-efficient 50cc scooters for quick island trips.</p>
+          <p class="price">€42 per day</p>
+        </div>
+        <div class="item">
+          <img src="images/Tet scooter 6__.jpg" alt="Scooter 125cc" />
+          <h3>Scooter 125cc</h3>
+          <p>Powerful 125cc scooters for longer or faster rides.</p>
+          <p class="price">€55 per day</p>
+        </div>
+        <div class="item">
+          <img src="images/Tet scooter helm 2__.jpg" alt="Scooter Helmets" />
+          <h3>Included Helmets</h3>
+          <p>High-quality helmets included with every scooter rental.</p>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    &copy; 2025 L.M. Rental & Travel Agency. All rights reserved.
-  </footer>
-</body>
-</html>
+    <section id="taxi">
+      <h2>Taxi Service</h2>
+      <div class="items">
+        <div class="item">
+          <img src="images/Tet taxi 1__.jpg" alt="Taxi Service" />
+          <h3>Reliable Taxi Service</h3>
+          <p>Safe and comfortable transport around Korčula island.</p>
+        </div>
+        <div class="item">
+          <img src
