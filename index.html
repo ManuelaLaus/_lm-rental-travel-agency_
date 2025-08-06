@@ -76,12 +76,38 @@
     .contact-button:hover {
       background-color: #8a271d;
     }
+    .contact-section {
+      margin-top: 1.5rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
     footer {
       background-color: var(--main-red);
       color: var(--white);
       text-align: center;
       padding: 1rem;
       margin-top: 3rem;
+    }
+    /* Back to Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      background-color: var(--main-red);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: background-color 0.3s;
+    }
+    #backToTop:hover {
+      background-color: #8a271d;
     }
   </style>
 </head>
@@ -117,22 +143,25 @@
       <p>
         If you are already on the island, feel free to stop by. I'm located at the Port 9 Resort Hotel, 20 meters above the reception. Hope to see you soon!
       </p>
-      <img src="images/Tet voorkant Banner 2__.jpg" alt="Rental Agency Banner" class="banner" />
-      <div>
-        <strong>Questions or ready to book? Call us: +385 91 503 44 99</strong><br />
-        <a href="tel:+385915034499" class="contact-button">Call Us</a>
+      <img src="images/Tet voorkant 4__.jpg" alt="Rental Agency Banner" class="banner" />
+      <div class="contact-section">
+        Questions or ready to book? Call us: +385 91 503 44 99<br />
+        <a href="tel:+385915034499" class="contact-button">📞 Call Us</a>
       </div>
     </section>
 
-    <!-- Example other sections with contact button -->
+    <!-- Rest of the sections remain unchanged -->
+
     <section id="bikes">
       <h2>Bikes</h2>
       <p>
         Do you also love cycling in beautiful surroundings and don’t mind some light exercise? We offer regular bicycles, mountain bikes, and e-bikes. All perfect for exploring different parts of the island of Korčula. Of course, helmets are provided for your safety.
       </p>
-      <div>
-        <strong>Questions or ready to book? Call us: +385 91 503 44 99</strong><br />
-        <a href="tel:+385915034499" class="contact-button">Call Us</a>
+      <img src="images/Tet fiets 4__.jpg" alt="Bikes" />
+      <img src="images/Tet fietshelm 1__.jpg" alt="Bike Helmets" />
+      <div class="contact-section">
+        Questions or ready to book? Call us: +385 91 503 44 99<br />
+        <a href="tel:+385915034499" class="contact-button">📞 Call Us</a>
       </div>
     </section>
 
@@ -141,9 +170,12 @@
       <p>
         Explore the island easily with our reliable scooters. We offer 50 cc and 125 cc models. Helmets are provided for your safety.
       </p>
-      <div>
-        <strong>Questions or ready to book? Call us: +385 91 503 44 99</strong><br />
-        <a href="tel:+385915034499" class="contact-button">Call Us</a>
+      <img src="images/Tet scooter 2__.jpg" alt="Scooters" />
+      <img src="images/Tet scooter 6__.jpg" alt="Scooter models" />
+      <img src="images/Tet scooter helm 2__.jpg" alt="Scooter Helmets" />
+      <div class="contact-section">
+        Questions or ready to book? Call us: +385 91 503 44 99<br />
+        <a href="tel:+385915034499" class="contact-button">📞 Call Us</a>
       </div>
     </section>
 
@@ -152,9 +184,9 @@
       <p>
         <!-- Add car rental text here -->
       </p>
-      <div>
-        <strong>Questions or ready to book? Call us: +385 91 503 44 99</strong><br />
-        <a href="tel:+385915034499" class="contact-button">Call Us</a>
+      <div class="contact-section">
+        Questions or ready to book? Call us: +385 91 503 44 99<br />
+        <a href="tel:+385915034499" class="contact-button">📞 Call Us</a>
       </div>
     </section>
 
@@ -165,9 +197,9 @@
       </p>
       <img src="images/Tet Boat 1__.jpg" alt="Boat 1" style="max-width:100%; height:auto; margin-bottom:10px;" />
       <img src="images/Tet Boat 2__.jpg" alt="Boat 2" style="max-width:100%; height:auto; margin-bottom:10px;" />
-      <div>
-        <strong>Questions or ready to book? Call us: +385 91 503 44 99</strong><br />
-        <a href="tel:+385915034499" class="contact-button">Call Us</a>
+      <div class="contact-section">
+        Questions or ready to book? Call us: +385 91 503 44 99<br />
+        <a href="tel:+385915034499" class="contact-button">📞 Call Us</a>
       </div>
     </section>
 
@@ -177,13 +209,11 @@
         We offer a modernly furnished apartment for rent in the charming village of Žrnovo.
         Enjoy your stay in our comfortable and well-located apartment, just a short ride from the centre of the town of Korčula. The apartment also offers easy access to all other parts of the island, making it an ideal base for exploring Korčula. Fully equipped with everything you need for a relaxing holiday, including a kitchen, air conditioning, free Wi-Fi, and a private parking space right in front of the apartment. Perfect for couples seeking convenience and comfort during their visit to Korčula.
       </p>
-      <p>
-        <a href="https://www.booking.com/hotel/hr/apartment-mana.nl.html?aid=357028&label=bin859jc-10CAsoZUIOYXBhcnRtZW50LW1hbmFIM1gDaGWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AvDZs8QGwAIB0gIkYzcwOTlhZTItNjhkNi00Zjg1LWFlMGUtZjU1ZmFhMzEwZjU02AIB4AIB&sid=130959e5ac0d94f139c723a149cb4174&dist=0&keep_landing=1&sb_price_type=total&type=total" target="_blank" rel="noopener noreferrer">Book your stay here on Booking.com</a>
-      </p>
+      <a href="https://www.booking.com/hotel/hr/apartment-mana.nl.html?aid=357028&label=bin859jc-10CAsoZUIOYXBhcnRtZW50LW1hbmFIM1gDaGWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AvDZs8QGwAIB0gIkYzcwOTlhZTItNjhkNi00Zjg1LWFlMGUtZjU1ZmFhMzEwZjU02AIB4AIB&sid=130959e5ac0d94f139c723a149cb4174&dist=0&keep_landing=1&sb_price_type=total&type=total" target="_blank" rel="noopener noreferrer">Book your stay here on Booking.com</a>
       <img src="images/apartment_photo_5.jpg" alt="Apartment example photo" style="max-width:100%; height:auto;" />
-      <div>
-        <strong>Questions or ready to book? Call us: +385 91 503 44 99</strong><br />
-        <a href="tel:+385915034499" class="contact-button">Call Us</a>
+      <div class="contact-section">
+        Questions or ready to book? Call us: +385 91 503 44 99<br />
+        <a href="tel:+385915034499" class="contact-button">📞 Call Us</a>
       </div>
     </section>
 
@@ -194,9 +224,9 @@
       </p>
       <img src="images/Tet taxi 1__.jpg" alt="Taxi service" style="max-width:100%; height:auto; margin-bottom:10px;" />
       <img src="images/Tet taxi 2__.jpg" alt="Taxi service 2" style="max-width:100%; height:auto; margin-bottom:10px;" />
-      <div>
-        <strong>Questions or ready to book? Call us: +385 91 503 44 99</strong><br />
-        <a href="tel:+385915034499" class="contact-button">Call Us</a>
+      <div class="contact-section">
+        Questions or ready to book? Call us: +385 91 503 44 99<br />
+        <a href="tel:+385915034499" class="contact-button">📞 Call Us</a>
       </div>
     </section>
 
@@ -205,14 +235,33 @@
       <p>📍 Location: Port 9; Dubrovacka cesta 19, Korčula (near the car ferry)</p>
       <p>📞 Phone & WhatsApp: +385 91 503 44 99</p>
       <p>Instagram: <a href="https://www.instagram.com/korcula_l.m._rental_agency" target="_blank" rel="noopener noreferrer">@korcula_l.m._rental_agency</a></p>
-      <div>
-        <strong>Questions or ready to book? Call us: +385 91 503 44 99</strong><br />
-        <a href="tel:+385915034499" class="contact-button">Call Us</a>
+      <div class="contact-section">
+        Questions or ready to book? Call us: +385 91 503 44 99<br />
+        <a href="tel:+385915034499" class="contact-button">📞 Call Us</a>
       </div>
     </section>
   </main>
   <footer>
     © 2025 L.M. Rental & Travel Agency. All rights reserved.
   </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Go to top">↑</button>
+
+  <script>
+    const btn = document.getElementById('backToTop');
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+  </script>
 </body>
-</html> 
+</html>
